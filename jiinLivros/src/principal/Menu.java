@@ -10,6 +10,8 @@ public class Menu {
 		int opcao;
 
 		// while(true) {
+		System.out.println("*    *    *    *    *    *    *    *    *    *    *    *    *    ");
+		System.out.println("    *    *    *    *    *    *    *    *    *    *    *    *    *");
 		System.out.println("-----------------------------------------------------------------");
 		System.out.println("                Sistema gerenciador de biblioteca                ");
 		System.out.println("-----------------------------------------------------------------");
