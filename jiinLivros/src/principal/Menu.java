@@ -10,6 +10,17 @@ public class Menu {
 		int opcao;
 
 		// while(true) {
+		System.out.println("    *    *    *    *    *    *    *    *    *    *    *    *    *");
+		System.out.println(" *    *    *____*    *____*    *____*    *_______   *   ____  *  ");
+		System.out.println("   *    *  |    | *  |    | *  |    | *  |       \\ *   |    |   *");
+		System.out.println(" *    *    |    |   *|    |   *|    |   *|        \\  * |    | *  ");
+		System.out.println("    *   *  |    | *  |    | *  |    | *  |         \\   |    |   ");
+		System.out.println(" *    *    |    |   *|    |   *|    |   *|    |\\    \\* |    | * ");
+		System.out.println("    *    * |    |*   |    |*   |    |*   |    |*\\    \\ |    |  *");
+		System.out.println(" *  ___*   |    |  * |    |   *|    |  * |    |  \\    \\|    | * ");
+		System.out.println("   |   |___|    |*   |    |*   |    |*   |    | * \\         |   ");
+		System.out.println("*  |	        |  * |    |   *|    |   *|    |   *\\        | * ");
+		System.out.println("   |____________|*   |____|*   |____|*   |____|*    \\_______|   ");
 		System.out.println("*    *    *    *    *    *    *    *    *    *    *    *    *    ");
 		System.out.println("    *    *    *    *    *    *    *    *    *    *    *    *    *");
 		System.out.println("-----------------------------------------------------------------");
