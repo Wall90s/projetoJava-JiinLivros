@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Giyo
- *
- */
-module javaProject {
-}
