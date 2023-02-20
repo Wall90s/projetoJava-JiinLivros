@@ -2,6 +2,8 @@ package principal;
 
 import java.util.Scanner;
 
+import principal.util.Cores;
+
 public class Menu {
 
 	public static void main(String[] args) {
@@ -10,18 +12,18 @@ public class Menu {
 		int cod, isbnlivro, voltarmenu;
 		String nome, nomelivro, generolivro, autorlivro;
 
-		System.out.println("Digite seu nome: ");
+		System.out.println(Cores.ANSI_PURPLE_BACKGROUND_BRIGHT + Cores.TEXT_BLACK +  "Digite seu nome: ");
 		nome = leia.nextLine();
 
 				while(true) {
-				System.out.println("    *    *    *    *    *    *    *    *    *    *    *    *    *");
-				System.out.println(" *    *    *____*    *____*    *____*    *_______   *   ____  *  ");
-				System.out.println("   *    *  |    | *  |    | *  |    | *  |       \\ *   |    |   *");
-				System.out.println(" *    *    |    |   *|    |   *|    |   *|        \\  * |    | *  ");
+				System.out.println(Cores.TEXT_WHITE_BOLD + Cores.ANSI_PURPLE_BACKGROUND + "    *    *    *    *    *    *    *    *    *    *    *    *    *");
+				System.out.println(" *    *    *____*    *____*    *____*    *_______   *    ____  * ");
+				System.out.println("   *    *  |    | *  |    | *  |    | *  |       \\ *   |    |  *");
+				System.out.println(" *    *    |    |   *|    |   *|    |   *|        \\  * |    | * ");
 				System.out.println("    *   *  |    | *  |    | *  |    | *  |         \\   |    |   ");
-				System.out.println(" *    *    |    |   *|    |   *|    |   *|    |\\    \\* |    | * ");
-				System.out.println("    *    * |    |*   |    |*   |    |*   |    |*\\    \\ |    |  *");
-				System.out.println(" *  ___*   |    |  * |    |   *|    |  * |    |  \\    \\|    | * ");
+				System.out.println(" *    *    |    |   *|    |   *|    |   *|    |\\    \\*|    | * ");
+				System.out.println("    *    * |    |*   |    |*   |    |*   |    |*\\    \\|    |  *");
+				System.out.println(" *  ___*   |    |  * |    |   *|    |  * |    |  \\    \\|   | * ");
 				System.out.println("   |   |___|    |*   |    |*   |    |*   |    | * \\         |   ");
 				System.out.println("*  |	        |  * |    |   *|    |   *|    |   *\\        | * ");
 				System.out.println("   |____________|*   |____|*   |____|*   |____|*    \\_______|   ");
@@ -31,7 +33,7 @@ public class Menu {
 				System.out.println("                Sistema gerenciador de biblioteca                ");
 				System.out.println("-----------------------------------------------------------------");
 				System.out.println("                                                                 ");
-				System.out.println("           Olá " + nome + ", digite a opção que deseja:            ");
+				System.out.println(Cores.TEXT_YELLOW_BOLD + "           Olá " + nome + ", digite a opção que deseja:          ");
 				System.out.println("                                                                 ");
 				System.out.println("                                                                 ");
 				System.out.println("           < 1 >  Consultar livro                                ");
@@ -44,13 +46,13 @@ public class Menu {
 									cod = leia.nextInt();
 						if(cod == 0) {
 										
-						System.out.println("Encerrando JIIN livros... ");
+						System.out.println(Cores.ANSI_RED_BACKGROUND +  "Encerrando JIIN livros... ");
 						System.exit(0);
 						}
 
 				switch(cod) {
 				case 1:
-				System.out.println("Você selecionou consultar livro!");
+				System.out.println(Cores.ANSI_GREEN_BACKGROUND + Cores.TEXT_WHITE + "Você selecionou consultar livro!");
 				System.out.println("Você deseja: ");
 				System.out.println("           < 1 >  Consultar por nome");
 				System.out.println("           < 2 >  Consultar por autor");
@@ -87,14 +89,14 @@ public class Menu {
 					break;
 					
 				case 2:
-					System.out.println("Você selecionou cadastrar livro");
+					System.out.println(Cores.ANSI_GREEN_BACKGROUND + Cores.TEXT_WHITE + "Você selecionou cadastrar livro");
 					System.out.println("Para voltar ao menu, digite 0");
 					System.out.println("Para continuar, digite 1");
 					cod = leia.nextInt();
 					
 					switch(cod) {
 					case 0:
-					System.out.println("Voltando ao menu...");
+					System.out.println(Cores.TEXT_BLACK + Cores.ANSI_PURPLE_BACKGROUND + "Voltando ao menu...");
 						break;
 					
 					case 1:
