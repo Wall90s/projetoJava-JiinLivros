@@ -9,9 +9,10 @@ public class Menu {
 	public static void main(String[] args) {
 		
 		Scanner leia = new Scanner(System.in);
-		int cod, isbnlivro, voltarmenu;
-		String nome, nomelivro, generolivro, autorlivro;
-
+		int isbn, anoDePublicacao, qtdPagina, voltarmenu, opcao;
+		String titulo, editora, sinopse, genero, idioma, autor, nome;
+		int tipo = 0, codigo = 0;
+		
 		System.out.println(Cores.ANSI_PURPLE_BACKGROUND_BRIGHT + Cores.TEXT_BLACK +  "Digite seu nome: ");
 		nome = leia.nextLine();
 
@@ -43,14 +44,14 @@ public class Menu {
 				System.out.println("           < 0 >  Sair                                           ");
 				System.out.println("                                                                 ");
 				System.out.println("-----------------------------------------------------------------");
-									cod = leia.nextInt();
-						if(cod == 0) {
+									opcao = leia.nextInt();/*é a variavel das opções do menu*/
+						if(opcao == 0) {
 										
 						System.out.println(Cores.ANSI_RED_BACKGROUND +  "Encerrando JIIN livros... ");
 						System.exit(0);
 						}
-
-				switch(cod) {
+					/*O switch do menu, switch de fora*/
+				switch(opcao) {
 				case 1:
 				System.out.println(Cores.ANSI_GREEN_BACKGROUND + Cores.TEXT_WHITE + "Você selecionou consultar livro!");
 				System.out.println("Você deseja: ");
@@ -59,27 +60,27 @@ public class Menu {
 				System.out.println("           < 3 >  Consultar por gênero");
 				System.out.println("           < 4 >  consultar por ISBN");
 				System.out.println("           < 0 >  voltar para o menu");
-						cod = leia.nextInt();
-				
-						switch(cod) {
+						opcao = leia.nextInt();
+							/*O switch de dentro do consultar, switch de dentro*/
+						switch(opcao) {
 						case 1:
-						System.out.println("Digite o nome do livro: ");
-						nomelivro = leia.nextLine();
+						System.out.println("Digite o título do livro: ");
+						titulo = leia.nextLine();
 							break;
 							
 						case 2:
 							System.out.println("Digite o autor do livro: ");
-							autorlivro = leia.nextLine();
+							autor = leia.nextLine();
 								break;
 						
 						case 3:
 							System.out.println("Digite o genêro do livro: ");
-							generolivro = leia.nextLine();
+							genero = leia.nextLine();
 								break;
 								
 						case 4:
 							System.out.println("Digite o ISBN do livro: ");
-							isbnlivro = leia.nextInt();
+							isbn = leia.nextInt();
 								break;
 						
 						case 0:
@@ -87,14 +88,46 @@ public class Menu {
 								break;
 						}
 					break;
-					
+		
+					/*O switch do menu, switch de fora*/
 				case 2:
 					System.out.println(Cores.ANSI_GREEN_BACKGROUND + Cores.TEXT_WHITE + "Você selecionou cadastrar livro");
-					System.out.println("Para voltar ao menu, digite 0");
-					System.out.println("Para continuar, digite 1");
-					cod = leia.nextInt();
 					
-					switch(cod) {
+						System.out.println("Digite o título: ");
+						titulo = leia.nextLine();
+						
+				        System.out.println("Digite a editora: ");
+						editora = leia.nextLine();
+						
+				        System.out.println("Digite tipo de livro: 1 para Digital, 2 para Físico " + tipo);
+				        tipo = leia.nextInt();
+				        
+				        System.out.println("Digite gênero: ");
+				        genero = leia.nextLine();
+				        
+				        System.out.println("Digite o Idioma: ");
+				        idioma = leia.nextLine();
+				        
+				        System.out.println("Digite o ISBN: ");
+				        isbn = leia.nextInt();
+				        
+				        System.out.println("Digite o autor: ");
+				        autor = leia.nextLine();
+				        
+				        System.out.println("Digite o ano de publicação: ");
+				        anoDePublicacao = leia.nextInt();
+				        
+				        System.out.println("Digite a quantidade de páginas: ");
+				        qtdPagina = leia.nextInt();
+				        /*variavelcodigo ainda não recebeu valor, precisa ser gerada.*/
+				        System.out.println("O livro foi cadastrado com sucesso! ");
+				        System.out.println("O código gerado foi: " + codigo);
+				   
+				/*	System.out.println("Para voltar ao menu, digite 0");
+					System.out.println("Para continuar, digite 1");
+					cod = leia.nextInt();*/
+				
+				/*	switch(cod) {
 					case 0:
 					System.out.println(Cores.TEXT_BLACK + Cores.ANSI_PURPLE_BACKGROUND + "Voltando ao menu...");
 						break;
@@ -102,30 +135,58 @@ public class Menu {
 					case 1:
 						System.out.println("Voltando ao menu...");
 						break;
-						}
-					
+						}*/
+				       
+				  /*O switch do menu, switch de fora*/
 				case 3:
 					System.out.println("Você selecionou atualizar livro!");
-					System.out.println("Digite o código ISBN do livro que deseja atualizar");
+			
+					// adicionar a atualização
+					
+					System.out.println("Digite o título: ");
+					titulo = leia.nextLine();
+					
+			        System.out.println("Digite a editora: ");
+					editora = leia.nextLine();
+					
+			        System.out.println("Digite tipo de livro: 1 para Digital, 2 para Físico " + tipo);
+			        tipo = leia.nextInt();
+			        
+			        System.out.println("Digite gênero: ");
+			        genero = leia.nextLine();
+			        
+			        System.out.println("Digite o Idioma: ");
+			        idioma = leia.nextLine();
+			        
+			        System.out.println("Digite o ISBN: ");
+			        isbn = leia.nextInt();
+			        
+			        System.out.println("Digite o autor: ");
+			        autor = leia.nextLine();
+			        
+			        System.out.println("Digite o ano de publicação: ");
+			        anoDePublicacao = leia.nextInt();
+			        
+			        System.out.println("Digite a quantidade de páginas: ");
+			        qtdPagina = leia.nextInt();
+			      
+			        System.out.println("O livro foi atualizado com sucesso! ");
 					System.out.println("Para voltar ao menu, digite 0");
 					break;
 					
+					/*O switch do menu, switch de fora*/
 				case 4:
 					System.out.println("Você selecionou excluir!");
+					// adicionar excluir
 					System.out.println("Digite o código ISBN do livro que deseja excluir");
-					isbnlivro = leia.nextInt();
+					isbn = leia.nextInt();
 					break;
 				
 				default:
 					System.out.println("Opção inválida.");
 					System.out.println("Para voltar ao menu, digite 0");
-					cod = leia.nextInt();
+					opcao = leia.nextInt();
 					
-						if(cod == 0) {
-						System.out.println("Retornando ao menu...");
-						}else{
-							System.out.println("Código inválido.");
-						}
 				}
 				}
 	}
