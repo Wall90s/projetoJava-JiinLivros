@@ -7,19 +7,22 @@ public class Digital extends Livro{
 	private boolean leitorDeTela;
 	private boolean pageFlip;
 	private String tipoDeArquivo;
-	//mudar 'nome' para 'titulo'
-	public Digital(String nome, String editora, String sinopse, String genero, String idioma, String tamanhoDoArquivo,
-			boolean configFonte, boolean leitorDeTela, boolean pageFlip, String tipoDeArquivo) {
-		super(nome, editora, sinopse, genero, idioma);
+	
+	public Digital(String titulo, String editora, String sinopse, String genero, String idioma, int isbn, String autor,
+			int anoDePublicacao, int codigo, int qtdPagina, int tipo, String tamanhoDoArquivo, boolean configFonte,
+			boolean leitorDeTela, boolean pageFlip, String tipoDeArquivo) {
+		super(titulo, editora, sinopse, genero, idioma, isbn, autor, anoDePublicacao, codigo, qtdPagina, tipo);
 		this.tamanhoDoArquivo = tamanhoDoArquivo;
 		this.configFonte = configFonte;
 		this.leitorDeTela = leitorDeTela;
 		this.pageFlip = pageFlip;
 		this.tipoDeArquivo = tipoDeArquivo;
 	}
+	
 	public String getTamanhoDoArquivo() {
 		return tamanhoDoArquivo;
 	}
+	
 	public void setTamanhoDoArquivo(String tamanhoDoArquivo) {
 		this.tamanhoDoArquivo = tamanhoDoArquivo;
 	}
@@ -49,7 +52,7 @@ public class Digital extends Livro{
 	}
 	
 	public void visualizar() {
-		//adicionar o super.visualizar();
+		super.visualizar();
 		System.out.println("Tamanho do arquivo: " + this.tamanhoDoArquivo);
 		System.out.println("Configuração de fonte: " + this.configFonte);
 		System.out.println("Page Flip: " + this.pageFlip);
