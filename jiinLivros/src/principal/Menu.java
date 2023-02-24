@@ -65,16 +65,19 @@ public class Menu {
 						switch(opcao) {
 						case 1:
 						System.out.println("Digite o título do livro: ");
+						leia.skip("\\R?");
 						titulo = leia.nextLine();
 							break;
 							
 						case 2:
 							System.out.println("Digite o autor do livro: ");
+							leia.skip("\\R?");
 							autor = leia.nextLine();
 								break;
 						
 						case 3:
 							System.out.println("Digite o genêro do livro: ");
+							leia.skip("\\R?");
 							genero = leia.nextLine();
 								break;
 								
@@ -94,24 +97,27 @@ public class Menu {
 					System.out.println(Cores.ANSI_GREEN_BACKGROUND + Cores.TEXT_WHITE + "Você selecionou cadastrar livro");
 					
 						System.out.println("Digite o título: ");
+						leia.skip("\\R?");
 						titulo = leia.nextLine();
 						
 				        System.out.println("Digite a editora: ");
-						editora = leia.nextLine();
+				        leia.skip("\\R?");
+				        editora = leia.nextLine();
 						
-				        System.out.println("Digite tipo de livro: 1 para Digital, 2 para Físico " + tipo);
-				        tipo = leia.nextInt();
 				        
 				        System.out.println("Digite gênero: ");
+				        leia.skip("\\R?");
 				        genero = leia.nextLine();
 				        
 				        System.out.println("Digite o Idioma: ");
+				        leia.skip("\\R?");
 				        idioma = leia.nextLine();
 				        
 				        System.out.println("Digite o ISBN: ");
 				        isbn = leia.nextInt();
 				        
 				        System.out.println("Digite o autor: ");
+				        leia.skip("\\R?");
 				        autor = leia.nextLine();
 				        
 				        System.out.println("Digite o ano de publicação: ");
@@ -119,6 +125,22 @@ public class Menu {
 				        
 				        System.out.println("Digite a quantidade de páginas: ");
 				        qtdPagina = leia.nextInt();
+				        
+				        System.out.println("Digite tipo de livro: 1 para Digital, 2 para Físico ");
+				        tipo = leia.nextInt();
+				        
+				        switch(tipo) {
+				        case 1 : 
+				        	
+				        	break;
+				        	
+				        case 2:
+				        	
+				        	break;
+				        	
+				        default:
+				        		System.out.println("Opção Inválida!");
+				        }
 				        /*variavelcodigo ainda não recebeu valor, precisa ser gerada.*/
 				        System.out.println("O livro foi cadastrado com sucesso! ");
 				        System.out.println("O código gerado foi: " + codigo);
@@ -144,24 +166,29 @@ public class Menu {
 					// adicionar a atualização
 					
 					System.out.println("Digite o título: ");
+					leia.skip("\\R?");
 					titulo = leia.nextLine();
 					
 			        System.out.println("Digite a editora: ");
-					editora = leia.nextLine();
+			        leia.skip("\\R?");
+			        editora = leia.nextLine();
 					
 			        System.out.println("Digite tipo de livro: 1 para Digital, 2 para Físico " + tipo);
 			        tipo = leia.nextInt();
 			        
 			        System.out.println("Digite gênero: ");
+			        leia.skip("\\R?");
 			        genero = leia.nextLine();
 			        
 			        System.out.println("Digite o Idioma: ");
+			        leia.skip("\\R?");
 			        idioma = leia.nextLine();
 			        
 			        System.out.println("Digite o ISBN: ");
 			        isbn = leia.nextInt();
 			        
 			        System.out.println("Digite o autor: ");
+			        leia.skip("\\R?");
 			        autor = leia.nextLine();
 			        
 			        System.out.println("Digite o ano de publicação: ");
@@ -171,7 +198,6 @@ public class Menu {
 			        qtdPagina = leia.nextInt();
 			      
 			        System.out.println("O livro foi atualizado com sucesso! ");
-					System.out.println("Para voltar ao menu, digite 0");
 					break;
 					
 					/*O switch do menu, switch de fora*/
@@ -184,8 +210,7 @@ public class Menu {
 				
 				default:
 					System.out.println("Opção inválida.");
-					System.out.println("Para voltar ao menu, digite 0");
-					opcao = leia.nextInt();
+					
 					
 				}
 				}
