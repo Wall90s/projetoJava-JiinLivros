@@ -8,7 +8,7 @@ public class Digital extends Livro{
 	private boolean pageFlip;
 	private String tipoDeArquivo;
 	
-	public Digital(String titulo, String editora, String sinopse, String genero, String idioma, int isbn, String autor,
+	public Digital(String titulo, String editora, String sinopse, String genero, String idioma, String isbn, String autor,
 			int anoDePublicacao, int codigo, int qtdPagina, int tipo, String tamanhoDoArquivo, boolean configFonte,
 			boolean leitorDeTela, boolean pageFlip, String tipoDeArquivo) {
 		super(titulo, editora, sinopse, genero, idioma, isbn, autor, anoDePublicacao, codigo, qtdPagina, tipo);

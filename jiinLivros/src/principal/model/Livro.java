@@ -6,7 +6,7 @@ public abstract class Livro { //abstratct Impede de criar o objeto livro, soment
 	private String sinopse;
 	private String genero;
 	private String idioma;
-	private int isbn;
+	private String isbn;
 	private String autor;
 	private int anoDePublicacao;
 	private int codigo;
@@ -15,7 +15,7 @@ public abstract class Livro { //abstratct Impede de criar o objeto livro, soment
 	
 	
 	
-	public Livro(String titulo, String editora, String sinopse, String genero, String idioma, int isbn, String autor, int anoDePublicacao, int codigo, int qtdPagina, int tipo) {
+	public Livro(String titulo, String editora, String sinopse, String genero, String idioma, String isbn, String autor, int anoDePublicacao, int codigo, int qtdPagina, int tipo) {
 		this.titulo = titulo;
 		this.editora = editora;
 		this.sinopse = sinopse;
@@ -45,11 +45,11 @@ public abstract class Livro { //abstratct Impede de criar o objeto livro, soment
 		this.titulo = titulo;
 	}
 
-	public int getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
 
-	public void setIsbn(int isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 

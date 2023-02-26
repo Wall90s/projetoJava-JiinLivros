@@ -9,7 +9,7 @@ public interface LivroRepository {
 	
 	public void consultarPorAutor(String autor);
 	
-	public void consultarPorIsbn(int isbn);
+	public void consultarPorIsbn(String isbn);
 	
 	
 	public void cadastrarLivro(Livro livro);

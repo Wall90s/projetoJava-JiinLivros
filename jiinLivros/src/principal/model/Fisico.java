@@ -2,14 +2,14 @@ package principal.model;
 
 public class Fisico extends Livro{
 	
-	private int tipoDeCapa;
+	private String tipoDeCapa;
 	private boolean reformado;
 	private String papelCapa;
 	private int estadoDeConsevacao;
 	private String papelMiolo;
 	
-	public Fisico(String titulo, String editora, String sinopse, String genero, String idioma, int isbn, String autor,
-			int anoDePublicacao, int codigo, int qtdPagina, int tipo, int tipoDeCapa, boolean reformado,
+	public Fisico(String titulo, String editora, String sinopse, String genero, String idioma, String isbn, String autor,
+			int anoDePublicacao, int codigo, int qtdPagina, int tipo, String tipoDeCapa, boolean reformado,
 			String papelCapa, int estadoDeConsevacao, String papelMiolo) {
 		super(titulo, editora, sinopse, genero, idioma, isbn, autor, anoDePublicacao, codigo, qtdPagina, tipo);
 		this.tipoDeCapa = tipoDeCapa;
@@ -20,10 +20,10 @@ public class Fisico extends Livro{
 	}
 	
 	
-	public int getTipoDeCapa() {
+	public String getTipoDeCapa() {
 		return tipoDeCapa;
 	}
-	public void setTipoDeCapa(int tipoDeCapa) {
+	public void setTipoDeCapa(String tipoDeCapa) {
 		this.tipoDeCapa = tipoDeCapa;
 	}
 	public boolean isReformado() {

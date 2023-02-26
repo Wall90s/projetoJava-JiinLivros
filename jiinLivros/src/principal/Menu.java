@@ -1,7 +1,10 @@
 package principal;
 
+import java.io.IOException;
 import java.util.Scanner;
 
+import principal.model.Digital;
+import principal.model.Fisico;
 import principal.util.Cores;
 
 public class Menu {
@@ -15,8 +18,10 @@ public class Menu {
 		
 		System.out.println(Cores.ANSI_PURPLE_BACKGROUND_BRIGHT + Cores.TEXT_BLACK +  "Digite seu nome: ");
 		nome = leia.nextLine();
-
-				while(true) {
+		
+		Digital d1 = new Digital("Ricardo III", "L&PM", "História sobre O Rei Ricardo III", "Romance", "PT - BR", "8525415847", "William Shakespeare", 2014, 1, 320, 1, "25MB", false, false, false, "PDF");
+		Fisico f1 = new Fisico("Carol", "Aletria", "Carol não é uma menininha chata daquelas que morre de medo", "Humor", "PT - BR", "856116770X", "Learte", 2014, 2, 36, 2, "Brochura", false, "-", 5, "-");
+			while(true) {
 				System.out.println(Cores.TEXT_WHITE_BOLD + Cores.ANSI_PURPLE_BACKGROUND + "    *    *    *    *    *    *    *    *    *    *    *    *    *");
 				System.out.println(" *    *    *____*    *____*    *____*    *_______   *    ____  * ");
 				System.out.println("   *    *  |    | *  |    | *  |    | *  |       \\ *   |    |  *");
@@ -67,30 +72,36 @@ public class Menu {
 						System.out.println("Digite o título do livro: ");
 						leia.skip("\\R?");
 						titulo = leia.nextLine();
-							break;
+						keyPress();	
+						break;
 							
 						case 2:
 							System.out.println("Digite o autor do livro: ");
 							leia.skip("\\R?");
 							autor = leia.nextLine();
-								break;
+							keyPress();	
+							break;
 						
 						case 3:
 							System.out.println("Digite o genêro do livro: ");
 							leia.skip("\\R?");
 							genero = leia.nextLine();
-								break;
+							keyPress();	
+							break;
 								
 						case 4:
 							System.out.println("Digite o ISBN do livro: ");
 							isbn = leia.nextInt();
-								break;
+							keyPress();	
+							break;
 						
 						case 0:
 							System.out.println("Retornando ao menu...");
-								break;
+							keyPress();	
+							break;
 						}
-					break;
+						keyPress();
+						break;
 		
 					/*O switch do menu, switch de fora*/
 				case 2:
@@ -131,11 +142,11 @@ public class Menu {
 				        
 				        switch(tipo) {
 				        case 1 : 
-				        	
+				        	keyPress();
 				        	break;
 				        	
 				        case 2:
-				        	
+				        	keyPress();
 				        	break;
 				        	
 				        default:
@@ -198,7 +209,8 @@ public class Menu {
 			        qtdPagina = leia.nextInt();
 			      
 			        System.out.println("O livro foi atualizado com sucesso! ");
-					break;
+			        keyPress();
+			        break;
 					
 					/*O switch do menu, switch de fora*/
 				case 4:
@@ -206,6 +218,7 @@ public class Menu {
 					// adicionar excluir
 					System.out.println("Digite o código ISBN do livro que deseja excluir");
 					isbn = leia.nextInt();
+					keyPress();
 					break;
 				
 				default:
@@ -215,4 +228,17 @@ public class Menu {
 				}
 				}
 	}
+	public static void keyPress() {
+
+		try {
+
+			System.out.println(Cores.TEXT_RESET + "\n\nPressione Enter para Continuar...");
+			System.in.read();
+
+		} catch (IOException e) {
+
+			System.out.println("Você pressionou uma tecla diferente de enter!");
+
+		}
+}
 }
