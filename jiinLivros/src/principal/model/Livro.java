@@ -119,7 +119,7 @@ public void visualizar () {
         }
         
         System.out.println("*******************************");
-        System.out.println("        DADOS DO LIVRO        ");
+        System.out.println("        DADOS DO LIVRO         ");
         System.out.println("*******************************");
         System.out.println("Título: " + this.titulo);
         System.out.println("editora: " + this.editora);
