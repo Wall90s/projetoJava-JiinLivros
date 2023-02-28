@@ -34,16 +34,16 @@ public class Menu {
 		while (true) {
 			System.out.println(Cores.TEXT_WHITE_BOLD + Cores.ANSI_PURPLE_BACKGROUND
 					+ "\n    *    *    *    *    *    *    *    *    *    *    *    *    *");
-			System.out.println(" *    *    *____*    *____*    *____*    *_______   *    ____  * ");
-			System.out.println("   *    *  |    | *  |    | *  |    | *  |       \\ *   |    |  *");
-			System.out.println(" *    *    |    |   *|    |   *|    |   *|        \\  * |    | * ");
-			System.out.println("    *   *  |    | *  |    | *  |    | *  |         \\   |    |   ");
-			System.out.println(" *    *    |    |   *|    |   *|    |   *|    |\\    \\*|    | * ");
-			System.out.println("    *    * |    |*   |    |*   |    |*   |    |*\\    \\|    |  *");
-			System.out.println(" *  ___*   |    |  * |    |   *|    |  * |    |  \\    \\|   | * ");
-			System.out.println("   |   |___|    |*   |    |*   |    |*   |    | * \\         |   ");
-			System.out.println("*  |	        |  * |    |   *|    |   *|    |   *\\        | * ");
-			System.out.println("   |____________|*   |____|*   |____|*   |____|*    \\_______|   ");
+			System.out.println(" *    *    *____*    *____*    *____*    *_______ *   * ____   * ");
+			System.out.println("   *    *  |    | *  |    | *  |    | *  |       \\     |    |   *");
+			System.out.println(" *    *    |    |   *|    |   *|    |   *|        \\  * |    | *  ");
+			System.out.println("    *   *  |    | *  |    | *  |    | *  |         \\   |    |    ");
+			System.out.println(" *    *    |    |   *|    |   *|    |   *|    |\\    \\* |    | *  ");
+			System.out.println("    *    * |    |*   |    |*   |    |*   |    |*\\    \\ |    |   *");
+			System.out.println(" *  ___*   |    |  * |    |   *|    |  * |    |  \\    \\|    |  * ");
+			System.out.println("   |   |___|    |*   |    |*   |    |*   |    | * \\         |    ");
+			System.out.println(" * |	        |  * |    |   *|    |   *|    |   *\\        | *  ");
+			System.out.println("   |____________|*   |____|*   |____|*   |____|*    \\_______|    ");
 			System.out.println("*    *    *    *    *    *    *    *    *    *    *    *    *    ");
 			System.out.println("    *    *    *    *    *    *    *    *    *    *    *    *    *");
 			System.out.println("-----------------------------------------------------------------");
@@ -247,7 +247,7 @@ public class Menu {
 
 				break;
 			case 3:
-				System.out.println("Você selecionou atualizar livro! \n");
+				System.out.println(Cores.ANSI_PURPLE_BACKGROUND + Cores.TEXT_WHITE + "Você selecionou atualizar livro! \n");
 
 				// adicionar a atualização
 
@@ -377,7 +377,7 @@ public class Menu {
 
 			/* O switch do menu, switch de fora */
 			case 4:
-				System.out.println("Você selecionou excluir!\n");
+				System.out.println(Cores.ANSI_PURPLE_BACKGROUND + Cores.TEXT_WHITE + "Você selecionou excluir!\n");
 	
 				System.out.println("Digite o código do livro que deseja excluir: \n");
 				codigo = leia.nextInt();
