@@ -116,12 +116,8 @@ public class LivroController implements LivroRepository {
 	public void atualizarLivro(Livro livro) {
 		var buscaLivro = buscarNaCollection(livro.getCodigo());
 		
-		if(buscaLivro != null) {
-			listaLivros.set(listaLivros.indexOf(buscaLivro), livro);
-			System.out.println("\nO Livro: " + livro.getTitulo() + " do código" + livro.getCodigo() +  " foi atualizada com sucesso!\n");
-		} else {
-			System.out.println("\nO Livro com o código: " + livro.getCodigo() + " não foi encontrada!\n");
-		}
+		listaLivros.set(listaLivros.indexOf(buscaLivro), livro);
+		System.out.println("\nO livro: " + livro.getTitulo() + " com o código " + livro.getCodigo() +  " foi atualizado com sucesso!\n");
 
 	}
 
@@ -134,7 +130,7 @@ public class LivroController implements LivroRepository {
 				System.out.print("\nO Livro com o " + codigo + " foi excluido com sucesso!\n");
 			}
 		} else {
-			System.out.println("\nO Livro com o código: " + codigo + " não foi encontrada!\n");
+			System.out.println("\nO Livro com o código: " + codigo + " não foi encontrado!\n");
 		}
 	}
 	

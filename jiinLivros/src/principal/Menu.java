@@ -368,7 +368,7 @@ public class Menu {
 					}
 
 				}else {
-					System.out.println("O livro foi atualizado com sucesso! \n");
+					System.out.println("\nO livro com o código: " + codigo + " não foi encontrado!\n");
 				}
 				
 
