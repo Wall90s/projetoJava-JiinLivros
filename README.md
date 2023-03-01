@@ -10,7 +10,11 @@ https://www.canva.com/design/DAFaqVOQtWA/zVb9InsfXeAG2oPNrZRaSQ/view?utm_content
 
 
 Vídeo do Projeto em funcionamento:
-Uploading workspace-spring-tool-suite-4-4171release-spring-tool-suite-4-2023-03-01-09-4_FYz4REnO.mp4…
+
+
+
+https://user-images.githubusercontent.com/123910027/222200503-712a0c10-7b6f-468a-9682-f5a7f09e0979.mp4
+
 
 
 Projeto desenvolvido em JAVA, no bootcamp da Generation Brasil no bloco 1. Feito em conjunto com @Wall90s, @Caroline-Viana, @giyodias, @LeticiaPires12, @pedroapinheiro, @SammyLexa 
