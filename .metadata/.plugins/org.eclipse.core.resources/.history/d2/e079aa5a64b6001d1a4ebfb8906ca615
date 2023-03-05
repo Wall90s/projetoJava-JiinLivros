@@ -1,0 +1,134 @@
+package principal.controller;
+
+import java.util.ArrayList;
+
+import principal.model.Livro;
+import principal.repository.LivroRepository;
+
+public class LivroController implements LivroRepository {
+
+	ArrayList<Livro> listaLivros = new ArrayList<Livro>();
+	private int numero = 1;
+	
+
+	@Override
+	public void consultarPorTitulo(String titulo) {
+		ArrayList<Livro> livrosEncontrados = new ArrayList<Livro>();
+
+		for (var livro : listaLivros) {
+			String livroTitulo = livro.getTitulo();
+			if (livroTitulo.equalsIgnoreCase(titulo)) {
+				livrosEncontrados.add(livro);
+			}
+		}
+
+		if (livrosEncontrados.size() == 0) {
+			System.out.println("Livro não encontrado na lista");
+		} else {
+			for (Livro livro : livrosEncontrados) {
+				livro.visualizar();
+			}
+		}
+
+	}
+
+	@Override
+	public void consultarPorGenero(String genero) {
+		ArrayList<Livro> livrosEncontrados = new ArrayList<Livro>();
+
+		for (var livro : listaLivros) {
+			String livroGenero = livro.getGenero();
+			if (livroGenero.equalsIgnoreCase(genero)) {
+				livrosEncontrados.add(livro);
+			}
+		}
+
+		if (livrosEncontrados.size() == 0) {
+			System.out.println("Gênero não encontrado na lista");
+		} else {
+			for (Livro livro : livrosEncontrados) {
+				livro.visualizar();
+			}
+		}
+
+	}
+
+	@Override
+	public void consultarPorAutor(String autor) {
+		ArrayList<Livro> livrosEncontrados = new ArrayList<Livro>();
+
+		for (var livro : listaLivros) {
+			String livroAutor = livro.getAutor();
+			if (livroAutor.equalsIgnoreCase(autor)) {
+				livrosEncontrados.add(livro);
+			}
+		}
+
+		if (livrosEncontrados.size() == 0) {
+			System.out.println("Autor não encontrado na lista");
+		} else {
+			for (Livro livro : livrosEncontrados) {
+				livro.visualizar();
+			}
+		}
+
+	}
+
+	@Override
+	public void consultarPorIsbn(String isbn) {
+		ArrayList<Livro> livrosEncontrados = new ArrayList<Livro>();
+
+		for (var livro : listaLivros) {
+			String livroIsbn = livro.getIsbn();
+			if (livroIsbn.equalsIgnoreCase(isbn)) {
+				livrosEncontrados.add(livro);
+			}
+		}
+
+		if (livrosEncontrados.size() == 0) {
+			System.out.println("ISBN não encontrado na lista");
+		} else {
+			for (Livro livro : livrosEncontrados) {
+				livro.visualizar();
+			}
+		}
+
+	}
+
+	@Override
+	public void cadastrarLivro(Livro livro) {
+		listaLivros.add(livro);
+	}
+
+	@Override
+	public void listarLivros() {
+		for (Livro livro : listaLivros) {
+			livro.visualizar();
+		}
+
+	}
+
+//	@Override
+//	public void atualizarLivro(Livro livro) {
+	//	var buscaLivro = buscarNaCollection(livro.getNumero);
+
+	//}
+
+	@Override
+	public void excluirLivro(int codigo) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public int gerarCodigo() {		
+		if (listaLivros.size() == 0 ) {
+			return numero;
+		}else {
+			numero++;
+			return numero;
+		}
+		
+	//public Conta buscarNaCollection (int numero)	
+	}
+
+}
