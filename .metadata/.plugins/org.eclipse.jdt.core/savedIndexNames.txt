@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Usuário\Desktop\JIIN\projetoJava-JiinLivros\.metadata\.plugins\org.eclipse.jdt.core
+2165587209.index
+3858438874.index
+1865797976.index
