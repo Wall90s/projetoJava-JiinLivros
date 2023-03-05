@@ -1,0 +1,17 @@
+.OqueEOJiin__titulo {
+    color: #6a036a;
+    font-family:Raleway;
+    font-size: 3.1875rem;
+}
+
+@media screen and (min-width: 0px) {
+    .OqueEOJiin__titulo {
+        font-size: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .OqueEOJiin__titulo {
+        font-size: 3.1875rem;
+    }
+  }

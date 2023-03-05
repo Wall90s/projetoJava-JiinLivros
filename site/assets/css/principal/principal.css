@@ -1,0 +1,16 @@
+.principal {
+    text-align: center;
+    background: #e781e7;
+}
+
+@media screen and (min-width: 0) {
+    .principal {
+        padding: 2.5rem 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .principal {
+        padding: 2.5rem;
+    }
+}

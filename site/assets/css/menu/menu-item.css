@@ -1,0 +1,7 @@
+.menu__item { /*Retirar as bullets do menu*/
+    list-style: none;
+}
+
+.menu__item:last-child .menu__link{ /*Eliminando a margem direita de "comunidade"*/
+    margin-right: 0;
+}
