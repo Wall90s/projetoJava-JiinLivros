@@ -1,7 +1,7 @@
 # JIIN Livros: Organizado como Mágica✨
 ## Um sistema para organizar e gerenciar livros de uma bliblioteca, capaz de cadastrar, deletar, atualizar e consultar livros.
 
-![image](https://raw.githubusercontent.com/Wall90s/projetoJava-JiinLivros/main/bg.png)
+![image](https://raw.githubusercontent.com/Wall90s/projetoJava-JiinLivros/main/site/assets/img/banner.png)
 
 - Veja [nossa apresentação do projeto](https://www.canva.com/design/DAFbls8SkTU/luaa2723zH7u1z7TnXX7DA/edit?utm_content=DAFbls8SkTU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
